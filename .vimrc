@@ -80,10 +80,18 @@ map <Leader>r <ESC>:w<CR>:!ruby "%"<CR>
 "-------------------------
 " NERDTree
 "-------------------------
+function! ToggleNERDTreeFind()
+    if g:NERDTree.IsOpen()
+        execute ':NERDTreeClose'
+    else
+        execute ':NERDTreeFind'
+    endif
+endfunction
+
 let NERDTreeIgnore = ['\.DS_Store', '\.idea', '\.git']
 let NERDTreeQuitOnOpen = 1
-map <Leader>d :NERDTreeToggle<CR>
-map <Leader>D :NERDTreeFind<CR>
+map <Leader>d :call ToggleNERDTreeFind()<CR>
+map <Leader>D :NERDTreeToggle<CR>
 
 "-------------------------
 " Fugitive
