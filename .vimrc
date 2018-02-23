@@ -17,6 +17,8 @@ call vundle#begin()
   Plugin 'rking/ag.vim'
   Plugin 'terryma/vim-multiple-cursors'
   Plugin 'Valloric/YouCompleteMe'
+  Plugin 'nelstrom/vim-visual-star-search'
+  Plugin 'isRuslan/vim-es6'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
@@ -28,6 +30,7 @@ set hlsearch
 set incsearch
 set smartcase
 set ignorecase " ignore case in search
+set autoread
 set diffopt=vertical
 set modelines=1
 set laststatus=2 " required for airline
@@ -63,6 +66,9 @@ nmap <leader>v :tabedit ~/.vimrc<CR>
 nmap <leader>n :set invnumber<CR>
 map <Leader>j :join<CR>
 map <leader>p <ESC>:set paste<CR>"*P<ESC>:set nopaste<CR>
+map <leader>cp :let @*=@%<CR>
+map <Leader>r <ESC>:e!<CR>
+
 " Popup navigation
 inoremap <expr> <c-k> pumvisible()?"\<Up>":"\<c-k>"
 inoremap <expr> <c-j> pumvisible()?"\<Down>":"\<c-j>"
@@ -75,7 +81,7 @@ map <Leader>b <ESC>:w<CR>:!bash "%"<CR>
 "-------------------------
 " Ruby
 "-------------------------
-map <Leader>r <ESC>:w<CR>:!ruby "%"<CR>
+map <Leader>ru <ESC>:w<CR>:!ruby "%"<CR>
 
 "-------------------------
 " NERDTree
