@@ -13,6 +13,7 @@ call vundle#begin()
   Plugin 'tpope/vim-surround'
   Plugin 'tpope/vim-unimpaired'
   Plugin 'tpope/vim-repeat'
+  Plugin 'tpope/vim-fugitive'
   Plugin 'altercation/vim-colors-solarized'
   Plugin 'rking/ag.vim'
   Plugin 'terryma/vim-multiple-cursors'
@@ -162,6 +163,7 @@ map ∆ :resize -5<CR>
 " Custom Syntax mappings
 "=========================
 au BufNewFile,BufRead *.soy set filetype=xml
+au BufNewFile,BufRead *.vue set filetype=html
 
 "=========================
 " Auto reload .vimrc
