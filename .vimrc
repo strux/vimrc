@@ -18,13 +18,14 @@ call vundle#begin()
   Plugin 'rking/ag.vim'
   Plugin 'terryma/vim-multiple-cursors'
   Plugin 'Valloric/YouCompleteMe'
+  Plugin 'ternjs/tern_for_vim'
   Plugin 'nelstrom/vim-visual-star-search'
   Plugin 'isRuslan/vim-es6'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
 set number
-set ts=4 sts=4 sw=4 expandtab
+set ts=2 sts=2 sw=2 expandtab
 set visualbell
 set splitright
 set hlsearch
@@ -164,6 +165,7 @@ map ∆ :resize -5<CR>
 "=========================
 au BufNewFile,BufRead *.soy set filetype=xml
 au BufNewFile,BufRead *.vue set filetype=html
+au BufNewFile,BufRead *.ts set filetype=javascript
 
 "=========================
 " Auto reload .vimrc
